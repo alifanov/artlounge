@@ -114,15 +114,16 @@ body {
 .contacts-desc a {
     color: #838383;
     margin-left: 30px;
+    float: right;
 }
 
 .contacts .right {
-    margin-left: 25px;
-    width: 47%;
+    margin-left: 20px;
+    width: 449px;
 }
 
 .input-wrapper input {
-    width: 395px;
+    width: 428px;
     margin-bottom: 10px;
     padding-left: 15px;
     height: 50px;
