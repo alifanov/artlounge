@@ -73,6 +73,10 @@ body {
     line-height: 1.5;
 }
 
+.post-text > div {
+    margin-bottom: 10px;
+}
+
 .post-title {
     margin-bottom: 20px;
     color: #545454;
