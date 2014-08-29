@@ -104,6 +104,7 @@ body {
 .contacts .big-title {
     font-size: 20px;
     letter-spacing: 7px;
+    text-align: left;
 }
 
 .contacts-desc a {
