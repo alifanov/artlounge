@@ -4,134 +4,20 @@
 
 {% block content %}
     <div class="gallery">
-    <div class="top-desc">
-        award the inspired brings together some of today's brightest artists, designers and photographers for your votes. Browse the profiles of the most recent contributors and cast your vote for the final 10 to reach our ceremony.
-        click the icon to tell us which of these artists you Love / Don't Love.
-    </div>
-        <div class="gallery-item" rel="gallery">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
+        <div class="top-desc">
+            award the inspired brings together some of today's brightest artists, designers and photographers for your votes. Browse the profiles of the most recent contributors and cast your vote for the final 10 to reach our ceremony.
+            click the icon to tell us which of these artists you Love / Don't Love.
         </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="{{ STATIC_URL }}img/gallery-img.jpg" rel="gallery">
-                <img src="{{ STATIC_URL }}img/gallery-img.jpg" />
-            </a>
-        </div>
+        {% for photo in photos %}
+            <div class="gallery-item" rel="gallery">
+                {% if photo.image %}
+                <a href="{{ photo.image.url }}" rel="gallery">
+                    <img src="{{ photo.small_image.url }}" />
+                </a>
+                {% else %}
+                    <img src="{{ photo.small_image.url }}" />
+                {% endif %}
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
