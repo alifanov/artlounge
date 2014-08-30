@@ -14,7 +14,7 @@ class MenuItem(models.Model):
         verbose_name = u'Раздел меню'
 
 class ImageItem(models.Model):
-    image = models.ImageField(upload_to=u'upload/', verbose_name=u'Изображение')
+    image = models.ImageField(upload_to=u'upload/', verbose_name=u'Изображение', blank=True, null=True)
     small_image = models.ImageField(upload_to=u'upload/', verbose_name=u'Превью')
     menuitem = models.ForeignKey(MenuItem, verbose_name=u'Раздел меню')
 
