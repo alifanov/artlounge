@@ -5,8 +5,7 @@
 {% block content %}
     <div class="gallery">
         <div class="top-desc">
-            award the inspired brings together some of today's brightest artists, designers and photographers for your votes. Browse the profiles of the most recent contributors and cast your vote for the final 10 to reach our ceremony.
-            click the icon to tell us which of these artists you Love / Don't Love.
+            {{ text|safe }}
         </div>
         {% for photo in photos %}
             <div class="gallery-item" rel="gallery">

@@ -12,6 +12,7 @@ class DesignView(TemplateView):
     def get_context_data(self, **kwargs):
         ctx = super(DesignView, self).get_context_data(**kwargs)
         ctx['photos'] = ImageItem.objects.filter(menuitem__name=u'Дизайн и декор')
+        ctx['text'] = MenuItem.objects.get(name=u'Дизайн и декор').text
         return ctx
 
 class MebelView(TemplateView):
