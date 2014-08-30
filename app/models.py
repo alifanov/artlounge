@@ -5,6 +5,7 @@ from django.db import models
 
 class MenuItem(models.Model):
     name = models.CharField(max_length=256, verbose_name=u'Название')
+    text = models.TextField(verbose_name=u'Текст страницы', blank=True)
 
     def __unicode__(self):
         return self.name
