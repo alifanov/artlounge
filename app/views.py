@@ -20,3 +20,9 @@ class MebelView(TemplateView):
 
 class ArtView(TemplateView):
     template_name = 'gallery.html'
+
+    def get_context_data(self, **kwargs):
+        ctx = super(ArtView, self).get_context_data(**kwargs)
+        ctx['photos'] = ImageItem.objects.filter(menuitem__name=u'Искусство')
+        ctx['text'] = MenuItem.objects.get(name=u'Искусство').text
+        return ctx
