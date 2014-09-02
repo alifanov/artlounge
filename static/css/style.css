@@ -184,6 +184,7 @@ body {
     text-decoration: none;
 }
 
+.menu-item a.active .menu-item-name,
 .menu-item a:hover .menu-item-name {
     color: #ed3535;
 }
