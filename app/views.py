@@ -18,6 +18,12 @@ class DesignView(TemplateView):
 class MebelView(TemplateView):
     template_name = 'gallery.html'
 
+    def get_context_data(self, **kwargs):
+        ctx = super(MebelView, self).get_context_data(**kwargs)
+        ctx['photos'] = ImageItem.objects.filter(menuitem__name=u'Мебель')
+        ctx['text'] = MenuItem.objects.get(name=u'Мебель').text
+        return ctx
+
 class ArtView(TemplateView):
     template_name = 'gallery.html'
 
