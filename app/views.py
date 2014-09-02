@@ -13,6 +13,7 @@ class DesignView(TemplateView):
         ctx = super(DesignView, self).get_context_data(**kwargs)
         ctx['photos'] = ImageItem.objects.filter(menuitem__name=u'Дизайн и декор')
         ctx['text'] = MenuItem.objects.get(name=u'Дизайн и декор').text
+        ctx['active'] = 'design'
         return ctx
 
 class MebelView(TemplateView):
@@ -22,6 +23,7 @@ class MebelView(TemplateView):
         ctx = super(MebelView, self).get_context_data(**kwargs)
         ctx['photos'] = ImageItem.objects.filter(menuitem__name=u'Мебель')
         ctx['text'] = MenuItem.objects.get(name=u'Мебель').text
+        ctx['active'] = 'mebel'
         return ctx
 
 class ArtView(TemplateView):
@@ -31,4 +33,5 @@ class ArtView(TemplateView):
         ctx = super(ArtView, self).get_context_data(**kwargs)
         ctx['photos'] = ImageItem.objects.filter(menuitem__name=u'Искусство')
         ctx['text'] = MenuItem.objects.get(name=u'Искусство').text
+        ctx['active'] = 'art'
         return ctx

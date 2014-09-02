@@ -28,19 +28,19 @@
 <div class="inner">
     <div class="menu">
         <div class="menu-item">
-            <a href="{% url 'design' %}">
+            <a href="{% url 'design' %}" class="{% if active == 'design' %}active{% endif %}">
                 <img src="{{ STATIC_URL }}img/design-button.png" style="width: 180px; height: auto;" />
                 <div class="menu-item-name">Дизайн и декор</div>
             </a>
         </div>
         <div class="menu-item">
-            <a href="{% url 'mebel' %}">
+            <a href="{% url 'mebel' %}" class="{% if active == 'mebel' %}active{% endif %}">
                 <img src="{{ STATIC_URL }}img/mebel-button.png" />
                 <div class="menu-item-name">Мебель</div>
             </a>
         </div>
         <div class="menu-item">
-            <a href="{% url 'art' %}">
+            <a href="{% url 'art' %}" class="{% if active == 'art' %}active{% endif %}">
                 <img src="{{ STATIC_URL }}img/pic-button.png" />
                 <div class="menu-item-name">Искусство</div>
             </a>
