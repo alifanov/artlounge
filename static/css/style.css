@@ -184,6 +184,10 @@ body {
     text-decoration: none;
 }
 
+.menu-item-name:hover {
+    color: #ed3535;
+}
+
 .gallery {
     width: 992px;
     margin: 40px auto;
