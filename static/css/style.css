@@ -207,3 +207,7 @@ body {
     margin-top: -20px;
     margin-bottom: 30px;
 }
+
+.top-links {
+    text-align: right;
+}
