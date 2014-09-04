@@ -38,7 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'app',
-    'widget_tweaks'
+    'widget_tweaks',
+    'django_settings'
 )
 
 MIDDLEWARE_CLASSES = (

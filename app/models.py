@@ -12,7 +12,7 @@ class Order(models.Model):
 
     class Meta:
         verbose_name = u'Заполнение формы отправки'
-        verbose_name_plural = u'Заполненея формы отправки'
+        verbose_name_plural = u'Заполнения формы отправки'
 
 class MenuItem(models.Model):
     name = models.CharField(max_length=256, verbose_name=u'Название')
