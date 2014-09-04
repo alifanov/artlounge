@@ -3,6 +3,17 @@ from django.db import models
 
 # Create your models here.
 
+class Order(models.Model):
+    email = models.CharField(max_length=256, verbose_name=u'E-mail')
+    comment = models.TextField(verbose_name=u'Комментарий')
+
+    def __unicode__(self):
+        return self.email
+
+    class Meta:
+        verbose_name = u'Заполнение формы отправки'
+        verbose_name_plural = u'Заполненея формы отправки'
+
 class MenuItem(models.Model):
     name = models.CharField(max_length=256, verbose_name=u'Название')
     text = models.TextField(verbose_name=u'Текст страницы', blank=True)
