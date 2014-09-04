@@ -18,6 +18,8 @@ $(function(){
         }
         if($("#id_email").val() != '' && $("#id_comment").val() != ''){
             $.fancybox($(".message-send-modal"));
+            $("#id_email").val('');
+            $("#id_comment").val('');
         }
         return false;
     });
