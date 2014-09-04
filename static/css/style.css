@@ -211,3 +211,11 @@ body {
 .top-links {
     text-align: right;
 }
+
+#id_email.error {
+    border: 1px solid red;
+}
+
+#id_comment.error {
+    border: 1px solid red;
+}

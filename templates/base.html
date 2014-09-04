@@ -145,21 +145,23 @@
 
         </div>
         <div class="right">
-            <div class="big-title">
-                Написать нам
-            </div>
-            <div class="contacts-desc" style="padding-top: 30px;">
-                Вы всегда сможите связатся с нами или написать нам свои пожелания
-            </div>
-            <div class="input-wrapper">
-                <input type="text" placeholder="Ваш E-mail" />
-            </div>
-            <div class="input-wrapper">
-                <input type="text" placeholder="Написать комментарий" />
-            </div>
-            <div class="input-wrapper">
-                <button>Отправить</button>
-            </div>
+            <form method="POST" id="bottom-form-id">{% csrf_token %}
+                <div class="big-title">
+                    Написать нам
+                </div>
+                <div class="contacts-desc" style="padding-top: 30px;">
+                    Вы всегда сможите связатся с нами или написать нам свои пожелания
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Ваш E-mail" name="email" id="id_email" />
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Написать комментарий" name="comment" id="id_comment" />
+                </div>
+                <div class="input-wrapper">
+                    <button>Отправить</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
