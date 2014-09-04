@@ -222,6 +222,7 @@ body {
 
 .message-send-modal {
     text-align: center;
+    width: 500px;
 }
 
 .message-send-modal p {
@@ -229,7 +230,6 @@ body {
     color: #838383;
     font-size: 12px;
     line-height: 1.5;
-    width: 500px;
 }
 
 .fancybox-skin {
