@@ -159,8 +159,7 @@
 {#                    <input type="text" placeholder="Ваш E-mail" name="email" id="id_email" />#}
                 </div>
                 <div class="input-wrapper">
-                    {% render_field order_form.comment type="text" placeholder="Написать комментарий" %}
-{#                    {{ order_form.comment|attr:"placeholder:Написать комментарий" }}#}
+                    {{ order_form.comment|attr:"placeholder:Написать комментарий" }}
 {#                    <input type="text" placeholder="Написать комментарий" name="comment" id="id_comment" />#}
                 </div>
                 <div class="input-wrapper">
