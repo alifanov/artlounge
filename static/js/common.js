@@ -17,7 +17,7 @@ $(function(){
             }, 3000);
         }
         if($("#id_email").val() != '' && $("#id_comment").val() != ''){
-            $.fancybox($(".message-send-modal")).show();
+            $.fancybox($(".message-send-modal"));
         }
         return false;
     });
