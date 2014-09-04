@@ -1,12 +1,29 @@
 # coding: utf-8
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, View
+from django.http import HttpResponse
 from app.models import *
+from app.forms import *
 # Create your views here.
-class HomeView(TemplateView):
+
+class GeneralMixin(object):
+    def get_context_data(self, **kwargs):
+        ctx = super(GeneralMixin, self).get_context_data(**kwargs)
+        ctx['order_form'] = OrderForm()
+        return ctx
+
+class OrderAjaxView(View):
+    def post(self, request, *args, **kwargs):
+        if request.POST:
+            form = OrderForm(request.POST)
+            if form.is_valid():
+                form.save()
+        return HttpResponse('OK')
+
+class HomeView(GeneralMixin, TemplateView):
     template_name = 'home.html'
 
-class DesignView(TemplateView):
+class DesignView(GeneralMixin, TemplateView):
     template_name = 'gallery.html'
 
     def get_context_data(self, **kwargs):
@@ -16,7 +33,7 @@ class DesignView(TemplateView):
         ctx['active'] = 'design'
         return ctx
 
-class MebelView(TemplateView):
+class MebelView(GeneralMixin, TemplateView):
     template_name = 'gallery.html'
 
     def get_context_data(self, **kwargs):
@@ -26,7 +43,7 @@ class MebelView(TemplateView):
         ctx['active'] = 'mebel'
         return ctx
 
-class ArtView(TemplateView):
+class ArtView(GeneralMixin, TemplateView):
     template_name = 'gallery.html'
 
     def get_context_data(self, **kwargs):
