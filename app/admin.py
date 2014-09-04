@@ -3,3 +3,4 @@ from app.models import *
 # Register your models here.
 admin.site.register(MenuItem)
 admin.site.register(ImageItem)
+admin.site.register(Order)
