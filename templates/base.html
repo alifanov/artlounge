@@ -1,3 +1,5 @@
+{% load widget_tweaks %}
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -153,10 +155,12 @@
                     Вы всегда сможите связатся с нами или написать нам свои пожелания
                 </div>
                 <div class="input-wrapper">
-                    <input type="text" placeholder="Ваш E-mail" name="email" id="id_email" />
+                    {{ order_form.email|attr:"placeholder:Ваш E-mail" }}
+{#                    <input type="text" placeholder="Ваш E-mail" name="email" id="id_email" />#}
                 </div>
                 <div class="input-wrapper">
-                    <input type="text" placeholder="Написать комментарий" name="comment" id="id_comment" />
+                    {{ order_form.comment|attr:"placeholder:Написать комментарий" }}
+{#                    <input type="text" placeholder="Написать комментарий" name="comment" id="id_comment" />#}
                 </div>
                 <div class="input-wrapper">
                     <button type="submit">Отправить</button>
