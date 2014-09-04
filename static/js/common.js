@@ -16,6 +16,9 @@ $(function(){
                 $("#id_comment").removeClass('error')
             }, 3000);
         }
+        if($("#id_email").val() != '' && $("#id_comment").val() != ''){
+
+        }
         return false;
     });
 });
