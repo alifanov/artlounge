@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from app.models import *
 from app.forms import *
 from django.core.mail import send_mail
+import django_settings
 # Create your views here.
 
 class GeneralMixin(object):
@@ -20,7 +21,7 @@ class OrderAjaxView(View):
             if form.is_valid():
                 order = form.save()
                 msg = u'E-mail: {}\nКомментарий: {}'.format(order.email, order.comment)
-                send_mail(u'Заполнение формы на сайте art-lounge.ru',msg, 'info@art-lounge.ru', [])
+                send_mail(u'Заполнение формы на сайте art-lounge.ru',msg, 'info@art-lounge.ru', [django_settings.get('admin_email'),])
         return HttpResponse('OK')
 
 class HomeView(GeneralMixin, TemplateView):
