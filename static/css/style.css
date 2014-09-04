@@ -219,3 +219,14 @@ body {
 #id_comment.error {
     border: 1px solid red;
 }
+
+.message-send-modal {
+    text-align: center;
+}
+
+.message-send-modal p {
+    font-family: Verdana;
+    color: #838383;
+    font-size: 12px;
+    line-height: 1.5;
+}
