@@ -3,6 +3,10 @@ $(function(){
         padding: 0
     });
 
+    $(".main-photos").fancybox({
+        padding: 0
+    });
+
     $("#bottom-form-id").submit(function(){
         if($("#id_email").val() == ''){
             $("#id_email").addClass('error');
